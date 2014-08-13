@@ -1,0 +1,234 @@
+* VR, Brief Historical Introduction
+
+- Early Days
+
+Holmes stereoscope (1861) - Prismatic lense on a wooden stand to hold a stereo card
+http://en.wikipedia.org/wiki/Stereoscope
+Your brain takes the two images and fuses them into a single view.
+
+- The Sword of Damocles (1968)
+
+Ivan Sutherland 1968 - First VR/AR head mounted display ever built
+"A head mounted three dimensional display, The ultimate display" 1965
+An ultrasonic and mechanical head tracker
+"No follow up, Ivan moved to something else. There was not such a thing as VR field" Henry Fuchs
+VR seems to vanish for almost two decades.
+
+- LEEP Optics (1979)
+
+http://www.leepvr.com/theleepsystem.php
+Precursor of distortion correction based stereoscopy.
+A camera capable of capturing the scene around the observer.
+The image gets registered in regular photo film.
+Proyecting a spherical image on the planar surface of the film causes distortion.
+A viewer device with its lenses reverts the distortion and presents the image to the observer as it was captured.
+
+- EyePhone (1985)
+
+VPL Research
+http://www.vrs.org.uk/virtual-reality-profiles/vpl-research.html
+LCD from SONY Pocket TVs
+First commercial HMD
+wide angle optics (no distortion correction)
+
+- Early 90s. Virtual Reality Bubble
+
+Real time interactive 3d graphics become mainstream
+Sega Saturn, PlayStation, Nintendo 64, 3D Acceleration Cards (3Dfx)
+Several companies try to push VR in the consumer space.
+Forte VFX1 home < 1000 USD
+
+http://www.mindflux.com.au/products/iis/vfx1.html
+
+Virtuality tries to get into the arcade space
+
+Problems:
+
+  No content
+  Hardware is underpowered to produce compeling enough experiences
+  High End PC is a Pentium 100 Mhz. No dedicated 3D hardware
+
+- Late 90s. Enthusiasm dies down and VR vanishes from the consumer market
+
+- Since late 90s
+
+Virtuous cycle of 3D Hardware development driven by the game industry
+We get extremely fast GPUs
+
+- Late 2000s. Smartphones War begins
+
+"We're now collecting the peace dividend of the smartphone war", Michael Abrash
+Tiny, lightweight high resolution displays and high speed sensors.
+1995 - Tilt-compensated compass, update rate 30hz - Power 20mAmps, 500-1000 USD
+Today - gyroscope, accelerom, magnetic sensor, update rate 1000Hz, Power 5mAmps - 5 USD
+
+* Consumer VR market today
+
+No market.
+No content.
+No consumer products released.
+Lots of announcements and release dates and a much more in stealth mode.
+
+Headsets
+
+Oculus DK1 (mid 2013)
+Oculus DK2 (mid 2014)
+Oculus CV1 (2015)
+Sony Morpheus (No release date)
+Gameface (2015)
+Samsung (No release date)
+ImmersiON - Vrelia (No release date)
+
+Input Devices
+
+Control VR (End of 2014)
+Prio VR (Apr 2014, delayed)
+Six Sense STEM (July 2014, delayed)
+Leap Motion (released)
+Myo Band (Late 2014)
+Virtuix Omni (Jan 2014, delayed)
+
+Games
+
+EVE: Valkyrie
+Superhot
+The gallery
+Alien: Isolation
+Technolust
+
+Dev. Tools
+
+Unity
+Unreal Engine
+
+* Is VR such a big deal?
+
+Present media approximate experiences. VR is the experience itself.
+VR can simulate any other medium: Movies, Books, Live Music...
+It's bigger than all the current media. It's a superset. it's even bigger than
+reality itself because we can recreate experiences that are impossible in the physical world.
+It's the definitive medium.
+
+VR is too important to be left to one or two companies.
+
+* The race to establish the VR platform begins
+
+We're living in the cold war of VR platforms.
+The wounds of the mobile platforms battle are still open.
+A guessing game where contenders try to anticipate each other's moves
+
+* What about the Web?
+
+When people talk about VR the Metaverse is often mentioned.
+It's a concept coined by Neal Stephenson in the Snow Crash novel. It describes his idea of the Internet of the future (future from 1992)
+
+"A virtual-reality space in which users can interact with a computer-generated environment and other users"
+"Collective virtual shared space"
+"Persistent, shared, 3D virtual spaces linked into a perceived virtual universe"
+
+All these definitions apply to the Web we use everyday if we just remove "3D"
+At Mozilla we believe in the Web as the VR platform and in Javascript as the language of the Metaverse
+
+"The Web is the Metaverse – just with a 2D interface" Vlad Vukićević, co creator of WebGL
+
+* Is the web ready?
+
+- We have a virtual space where people can already interact with one another.
+- We just have to make it 3D:
+    CSS 3D Transforms
+    WebGL. After Apple's announcement in WWDC 2014 it's now available in all major browsers.
+
+* How do you develop VR experiences?
+
+I'll focus on the Oculus Rift because it's the only product currently available. The same will apply to other HMDs.
+
+- Push content to the Rift
+
+An HMD is just another display connected to your computer
+The display is split between the two eyes
+We have to display content twice, once per eye with the appropriate translation to achieve the stereo effect.
+The lenses of the headset will distort the image so we need to apply the opposite distortion to present the content to the user as intended
+
+- React to the user head movement
+
+In VR the user has to be able to explore the environment
+To deliver the sense of immersion the content has to be consistent with the users head orientation
+The HMD is going to track the head movements and the content has to react accordingly
+The application needs access to the tracking data
+Latency is fundamental. For your brain to accept what it sees as real it has to be perceived in the same way as real objects. Threshold is around 15ms
+Latency seems to be one of the main causes of simulator sickness.
+
+- React to other user input
+
+The user has to be able to interact with the environment
+It can be input from Keyboard, mouse, gamepad, voice...
+This is a big area of exploration in VR.
+What is the best input method?
+Is there a best method for VR or it depends on the application?
+You should be able to interact with the virtual world in the same ways you would interact with the physical world. Using your body. Unfortunately, We don't have yet accurate full body trackers available in the consumer market.
+A gamepad seems a good place to start.
+
+- Summary
+
+Diagram:
+          Other user input
+    -----------------------------
+   |                            |
+   |                            V
+[ USER ]
+  HMD --- Head tracking ---> Computer / VR Application
+   ^                             |
+   | ------- Content  -----------
+
+- How can I put everything together in the browser?
+
+You need your to make your content fullscreen so it gets properly rendered in the HMD.
+Fullscreen API in the browser
+
+CODE EXAMPLE
+
+You can develop 3D content using webGL. Examples in this presentation will use three.js wich is an abstraction that sits on top of webGL
+
+* Accessing the tracker data
+
+1. Oculus Bridge
+
+native app that that uses the native Rift and sends the data to the browser via WebSockets, A native app? Really?
+> 10ms of latency. Bad!
+
+CODE SNIPPET
+
+2. vr.js
+
+browser extension (Chrome, Firefox) A plugin? Really?
+< 10ms. Good!
+
+CODE SNIPPET
+
+* VR native browser support
+
+Google and Mozilla have released experimental builds with API prototypes to directly communicate with HMDs from JavaScript.
+The API handles distortion and provide access to the tracking information.
+
+* VR Hello World
+
+EXAMPLE LIVE CODING
+
+vrhelloworld.com
+
+* Input methods
+
+There's no currently standard API to access the different input devices that will hit the market during the next months.
+
+* Is all of this really weby?
+
+Many people think that the declarative nature of HTML is a fundamental ingredient of the Web.
+VRML, anyone?
+GLAM is a project that modernizes the original VRML approach
+It's good that people explore every direction and we discover what works and what not.
+
+EXAMPLE
+
+- What's coming to the browser in the next year?
+
+Still need confirmation of what parts I can disclose about the roadmap.
