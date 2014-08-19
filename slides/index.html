@@ -3,6 +3,7 @@
   <head>
     <title>Title</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="style/main.css" />
     <style type="text/css">
       @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
       @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
@@ -21,17 +22,448 @@
 
 class: center, middle
 
-# VR In the Web: State of the art
+# VR in the Web: State of the art
+
+by Diego Marcos
+
+---
+
+class: center
+
+.center[![mozilla](images/mozilla.png)]
+
+# Diego Marcos
+
+---
+
+# I'm a Firefox OS Developer during the day...
+
+.center.top-margin[![firefoxos](images/firefoxos.png)]
+
+
+---
+
+# ...and a VR hacker during the night
+
+PHOTO
 
 ---
 
 # Agenda
 
-1. VR In the Web
+1. VR, Brief Historical Introduction
+2. VR Today
+3. VR Web
+4. VR Web in the Future
 
 ---
 
-# Introduction
+# Holmes stereoscope (1861)
+
+- Two prismatic lenses and wooden stand to hold a stereo card
+.center.top-margin[![holmes-stereoscope](images/holmesStereoscope.jpg)]
+
+---
+
+# Tru Vue (1931)
+
+.center.top-margin[![truvue-ad](images/truvueAd.jpg)]
+
+---
+
+# Tru Vue (1931)
+
+.center.top-margin[![truvue](images/truvue.jpg)]
+
+---
+
+# View Master (1939)
+
+.center.top-margin[![viewmaster-ad](images/viewmasterAd.jpg)]
+
+---
+
+# View Master (1939)
+
+.center.top-margin[![viewmaster](images/viewmaster.jpg)]
+
+---
+
+# The Sword of Damocles (1968)
+
+- Ivan Sutherland creation
+- First VR/AR head mounted display (HMD) ever built
+- Ultrasonic and mechanical head tracker
+.center.top-margin[![Sword of Damocles](images/swordOfDamocles.jpg)]
+
+---
+
+# The Sword of Damocles (1968)
+
+.center.top-margin[![http://theinternetcourse.net/category/ivan-sutherland/](images/swordOfDamocles4.gif)]
+
+---
+
+# The Sword of Damocles (1968)
+
+- Two CRT tubes proyecting images on two half-silvered mirrors
+.center.top-margin[![Sword of Damocles](images/swordOfDamocles2.jpg)]
+
+---
+
+# The Sword of Damocles (1968)
+
+- Computer graphics superimposed onto the real world
+.center.top-margin[![Sword of Damocles](images/swordOfDamocles3.jpg)]
+
+---
+
+# The Sword of Damocles (1968)
+
+- Ivan Sutherland moved on to other projects
+- "No follow up, there was not such a thing as VR field", Henry Fuchs
+- VR seems to vanish for almost two decades
+.center.top-margin[![http://theinternetcourse.net/category/ivan-sutherland/](images/swordOfDamocles5.gif)]
+
+---
+
+# LEEP Optics (1979)
+
+- Solves the problems of the stereo window
+- Previous systems don't offer any immersion
+- Wide angle lenses
+.center.top-margin[![Leep System](images/leepSystem.jpg)]
+
+---
+
+# LEEP Optics (1979)
+
+- Solves the problems of the stereo window
+- Previous systems don't offer feeling of immersion
+- Wide angle lenses
+.center.top-margin[![Leep System](images/leepOptics.jpg)]
+
+---
+
+# All the technology to build a VR system is available (1979)
+
+- 3D Graphics
+- Wide Angle Optics
+- Tracking systems
+- Head Mounted Displays
+
+---
+
+# VPL EyePhone (1988)
+
+- First commercially available HMD
+- It uses color LCD displays and LEEP optics
+- From 10k to 50k USD (high end model)
+- 90 degrees horizontal FOV
+.center.top-margin[![vpl-eyephone](images/VPLEyePhone.jpg)]
+
+---
+
+# Early 90s. Virtual Reality Bubble
+
+- Real time interactive 3D graphics become mainstream
+
+- Sega Saturn, PlayStation, Nintendo 64
+
+- 3D Graphics dedicated hardware (3DFx)
+
+---
+
+# Early 90s. Virtual Reality Bubble
+
+- Several companies trying to push VR into the consumer market
+- Forte VFX1 Home
+- < 1000 USD
+
+.center.top-margin[![forte-vfx1](images/vfx1.jpg)]
+
+---
+
+# Early 90s. Virtual Reality Bubble
+
+- Several companies trying to push VR into the consumer market
+- Virtuality
+- Arcade Spaces
+
+.center[![virtuality](images/virtuality.jpg)]
+
+---
+
+# Late 90s
+
+- Enthusiasm dies down and VR vanishes from the consumer market
+- No content
+- Hardware is underpowered to produce compeling enough experiences
+- High End PC is a Pentium 100 Mhz.
+
+---
+
+# Since late 90s
+
+- Virtuous cycle of 3D Hardware development driven by the game industry
+
+- We get extremely fast GPUs
+
+---
+
+# Since late 2000s. Smartphone War
+
+- "We're now collecting the peace dividend of the smartphone war", Michael Abrash
+
+- Tiny, lightweight high resolution displays and high speed sensors
+
+- 1995 - Tilt-compensated compass, update rate 30hz - Power 20mAmps, 500-1000 USD
+- Today - gyroscope, accelerom, magnetic sensor, update rate 1000Hz, Power 5mAmps - 5 USD
+
+---
+
+# Today
+
+- We can build affordable head mounted displays.
+
+- 3D hardware is powerful enough to create compelling VR content.
+
+---
+
+# Today
+
+- We can build affordable head mounted displays.
+
+- 3D hardware is powerful enough to create compelling VR content.
+
+---
+
+# Today
+
+- No market
+- No users
+- No content
+- No consumer products released.
+- Lots of announcements and release dates and much more in stealth mode.
+
+---
+
+# HMDs
+
+- Oculus DK1 (mid 2013)
+- Oculus DK2 (mid 2014)
+- Oculus CV1 (2015)
+- Sony Morpheus (No release date)
+- Gameface (2015)
+- Samsung VR (No release date)
+- ImmersiON - Vrelia (No release date)
+- Smart Googles (No release date)
+
+---
+
+# Input Devices
+
+- Control VR (End of 2014)
+- Prio VR (Apr 2014, delayed)
+- Six Sense STEM (July 2014, delayed)
+- Leap Motion (released)
+- Myo Band (Late 2014)
+- Virtuix Omni (Jan 2014, delayed)
+
+---
+
+# Content designed for VR
+
+- EVE: Valkyrie
+- Superhot
+- Gallery, six element
+- Alien: Isolation
+- Technolust
+- Luckeys Tale
+
+---
+
+# What's the big deal about VR?
+
+- Presence
+- The sense that you are somewhere else
+- More than immersion
+- Other media approximate experiences. VR is the experience itself
+
+---
+
+# What's the big deal about VR?
+
+- It's a superset
+
+- It's bigger than all the existing media
+
+- VR can simulate any other medium
+- It's bigger than reality itself becasue we can recreate experiences that are impossible in the physical world
+
+- It's the definitive medium
+
+---
+
+# VR will evolve into a major platform
+
+- The race to establish the VR platform has begun
+
+- Cold War
+
+- A guessing game where contenders try to anticipate each other's moves
+
+---
+
+class: center, middle
+
+# Internet will be VR
+# VR will be the Internet
+# It has to remain free
+
+---
+
+class: center, middle
+
+# VR is too important to be left to one or two companies
+
+---
+
+# The VR Web
+
+- The Metaverse
+
+- Concept coined by Neal Stephenson in the Snow Crash novel. It describes his idea of the Internet of the future (future from 1992)
+
+---
+
+# The VR Web
+
+- Metaverse
+
+- "A virtual-reality space in which users can interact with a computer-generated environment and other users"
+
+- "Collective virtual shared space"
+
+- "Persistent, shared, 3D virtual spaces linked into a perceived virtual universe"
+
+---
+
+# The VR Web
+
+- The Web we know today ticks all the boxes
+
+- "The Web is the Metaverse – just with a 2D interface" Vlad Vukićević, co creator of WebGL
+
+- At Mozilla we believe that the Metaverse will speak JavaScript
+
+---
+
+# Are we VR yet?
+
+- The Web is 3D ready
+
+- CSS 3D Transformations
+
+- WebGL. After Apple's announcement in WWDC 2014 it's now available in all major browsers.
+
+---
+
+# Where do I start with VR?
+
+- The only HMD available is the Oculus Rift (DK1 and DK2)
+
+- Unreal Engine and Unity hold the tooling duopoly. Paywalls
+
+- Gamepad as input device
+
+---
+
+# The Browser as your VR playground
+
+- We have a gamepad API
+
+- We have a fullscreen API
+
+- And now we also have experimental builds of Chrome and Firefox with Rift support
+
+---
+
+# The VR enabled browser
+
+- You can query for connected VR Devices
+
+```javascript
+navigator.getVRDevices().then(gotVRDevices);
+
+function gotVRDevices(vrDevices) {
+  // First, find a HMD -- just use the first one we find
+  for (var i = 0; i < vrdevs.length; ++i) {
+    if (vrdevs[i] instanceof HMDVRDevice) {
+      vrHMD = vrdevs[i];
+      break;
+    }
+  }
+
+  // Then, find that HMD's position sensor
+  for (var i = 0; i < vrdevs.length; ++i) {
+    if (vrdevs[i] instanceof PositionSensorVRDevice &&
+        vrdevs[i].hardwareUnitId == vrHMD.hardwareUnitId)
+    {
+      vrSensor = vrdevs[i];
+      break;
+    }
+  }
+
+}```
+
+---
+
+# The VR enabled browser
+
+- You can query for connected VR Devices
+
+```javascript
+navigator.getVRDevices().then(gotVRDevices);
+
+function gotVRDevices(vrDevices) {
+  // First, find a HMD -- just use the first one we find
+  for (var i = 0; i < vrdevs.length; ++i) {
+    if (vrdevs[i] instanceof HMDVRDevice) {
+      vrHMD = vrdevs[i];
+      break;
+    }
+  }
+
+  // Then, find that HMD's position sensor
+  for (var i = 0; i < vrdevs.length; ++i) {
+    if (vrdevs[i] instanceof PositionSensorVRDevice &&
+        vrdevs[i].hardwareUnitId == vrHMD.hardwareUnitId)
+    {
+      vrSensor = vrdevs[i];
+      break;
+    }
+  }
+
+}```
+
+---
+
+# The future of the VR Web
+
+- The Web is cross platform. Support to other HMDs as soon as they become available
+
+-
+
+---
+
+class: center, middle
+
+# vrhelloworld.com
+
+---
+
+
 
     </textarea>
     <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript">

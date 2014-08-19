@@ -1,16 +1,22 @@
+* VR
+
+"Any sufficiently advanced technology is indistinguishable from magic", Arthur C Clarke
+
 * VR, Brief Historical Introduction
 
 - Early Days
 
 Holmes stereoscope (1861) - Prismatic lense on a wooden stand to hold a stereo card
 http://en.wikipedia.org/wiki/Stereoscope
-Your brain takes the two images and fuses them into a single view.
+- Two images of the same scene taken from slightly different angles
+- Your brain takes the two images and fuses them into a single view.
+- Today we replace the card with a cell phone screen.
 
 - The Sword of Damocles (1968)
 
 Ivan Sutherland 1968 - First VR/AR head mounted display ever built
 "A head mounted three dimensional display, The ultimate display" 1965
-An ultrasonic and mechanical head tracker
+An ultrasonic and mechanical head tracker. Three trasnmitters, four receivers.
 "No follow up, Ivan moved to something else. There was not such a thing as VR field" Henry Fuchs
 VR seems to vanish for almost two decades.
 
@@ -18,10 +24,12 @@ VR seems to vanish for almost two decades.
 
 http://www.leepvr.com/theleepsystem.php
 Precursor of distortion correction based stereoscopy.
-A camera capable of capturing the scene around the observer.
-The image gets registered in regular photo film.
-Proyecting a spherical image on the planar surface of the film causes distortion.
-A viewer device with its lenses reverts the distortion and presents the image to the observer as it was captured.
+It solves the problem of the stereo window. Previous devices present a flat scene in front the eyes. There's no sense of immersion.
+
+A camera capable of capturing the scene around the observer. The image gets registered in regular photo film. Proyecting a spherical image on the planar surface of the film causes distortion.
+A viewer device with its lenses reverts the distortion and presents the image to the observer as it was captured wrapping around the field of view of the observer.
+
+In 1979 we already know all the necessary technology to implement a VR system
 
 - EyePhone (1985)
 
@@ -67,9 +75,10 @@ Today - gyroscope, accelerom, magnetic sensor, update rate 1000Hz, Power 5mAmps 
 No market.
 No content.
 No consumer products released.
-Lots of announcements and release dates and a much more in stealth mode.
+Just demos
+Lots of announcements and release dates and much more in stealth mode.
 
-Headsets
+Headsets for the consumer market
 
 Oculus DK1 (mid 2013)
 Oculus DK2 (mid 2014)
@@ -78,6 +87,7 @@ Sony Morpheus (No release date)
 Gameface (2015)
 Samsung (No release date)
 ImmersiON - Vrelia (No release date)
+Smart Googles (No release date)
 
 Input Devices
 
@@ -88,17 +98,22 @@ Leap Motion (released)
 Myo Band (Late 2014)
 Virtuix Omni (Jan 2014, delayed)
 
-Games
+Games designed for VR
 
 EVE: Valkyrie
 Superhot
-The gallery
+Gallery, six element
 Alien: Isolation
 Technolust
+Luckeys Tale
 
 Dev. Tools
 
-Unity
+Duopoly.
+Unity can compile to JavaScript using emscripten
+
+http://beta.unity3d.com/jonas/AngryBots/
+
 Unreal Engine
 
 * Is VR such a big deal?
@@ -141,6 +156,8 @@ At Mozilla we believe in the Web as the VR platform and in Javascript as the lan
 * How do you develop VR experiences?
 
 I'll focus on the Oculus Rift because it's the only product currently available. The same will apply to other HMDs.
+
+- VR System
 
 - Push content to the Rift
 
@@ -232,3 +249,6 @@ EXAMPLE
 - What's coming to the browser in the next year?
 
 Still need confirmation of what parts I can disclose about the roadmap.
+
+Weka - Machine Learning
+
