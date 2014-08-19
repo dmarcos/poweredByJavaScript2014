@@ -22,7 +22,7 @@
 
 class: center, middle
 
-# VR in the Web: State of the art
+# The state of VR in the Web
 
 by Diego Marcos
 
@@ -51,10 +51,10 @@ PHOTO
 
 # Agenda
 
-1. VR, Brief Historical Introduction
+1. VR in the Past
 2. VR Today
 3. VR Web
-4. VR Web in the Future
+4. VR in the Future
 
 ---
 
@@ -286,8 +286,11 @@ PHOTO
 # What's the big deal about VR?
 
 - Presence
+
 - The sense that you are somewhere else
+
 - More than immersion
+
 - Other media approximate experiences. VR is the experience itself
 
 ---
@@ -421,31 +424,65 @@ function gotVRDevices(vrDevices) {
 
 # The VR enabled browser
 
-- You can query for connected VR Devices
+- Push canvas content to the HMD retrieved by getVRDevices
+
+- Distortion is taken care by the browser
 
 ```javascript
-navigator.getVRDevices().then(gotVRDevices);
+  canvas.mozRequestFullScreen( { vrDisplay: vrHMD } );
+```
 
-function gotVRDevices(vrDevices) {
-  // First, find a HMD -- just use the first one we find
-  for (var i = 0; i < vrdevs.length; ++i) {
-    if (vrdevs[i] instanceof HMDVRDevice) {
-      vrHMD = vrdevs[i];
-      break;
-    }
+---
+
+# The VR enabled browser
+
+- Read state from the sensor retrieved by getVRDevices
+
+- Head orientation to update content accordingly
+
+```javascript
+  var orientation = vrInput.getState().orientation;
+```
+
+---
+
+# The VR enabled browser
+
+- Easier with Three.js
+- VREffect and VRControls
+
+```javascript
+  var viewportRatio = window.innerWidth / window.innerHeight;
+  var camera = new THREE.PerspectiveCamera(
+    70, viewportRatio, 1, 10000 );
+  var scene = new THREE.Scene();
+
+  // Construct your scene
+
+  var vrEffect = new THREE.VREffect(renderer, onVREffectLoaded);
+  var vrControls = new THREE.VRControls(camera);
+
+  render();
+
+  function render() {
+    // Update the scene
+    vrControls.update();
+    vrEffect.render(scene, camera);
+    requestAnimationFrame(render);
   }
 
-  // Then, find that HMD's position sensor
-  for (var i = 0; i < vrdevs.length; ++i) {
-    if (vrdevs[i] instanceof PositionSensorVRDevice &&
-        vrdevs[i].hardwareUnitId == vrHMD.hardwareUnitId)
-    {
-      vrSensor = vrdevs[i];
-      break;
-    }
-  }
+```
 
-}```
+---
+
+# The VR enabled browser
+
+- DOM in VR
+- CSS 3D Transforms
+
+```javascript
+  Example
+```
 
 ---
 
@@ -453,17 +490,22 @@ function gotVRDevices(vrDevices) {
 
 - The Web is cross platform. Support to other HMDs as soon as they become available
 
--
+- Support of input devices besides gamepad
+
+---
+
+# The future of the VR Web
+
+- Many people think that the declarative nature is a fundamental ingredient of the Web
+- VRML, anyone?
+- GLAM is a project that modernizes the original VRML approach
+- Mathbox 2, Data Driven Geometry
 
 ---
 
 class: center, middle
 
 # vrhelloworld.com
-
----
-
-
 
     </textarea>
     <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript">
